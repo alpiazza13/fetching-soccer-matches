@@ -32,7 +32,7 @@ to: \
 
 ## Optional Modifications
 1) Change the `competitions` variable to get match data for more leagues (but some leagues require you to pay).
-2) To specify your own date range to get match data for, modify this line: \
+2) To specify your own date range, modify this line: \
 `matches = data.get_info('matches', dateFrom=last_date_date, dateTo=n_days_ago_or_in_the_future(0))["matches"]` \
 to something like this: \
 `matches = data.get_info('matches', dateFrom=n_days_ago_or_in_the_future(-10), dateTo=n_days_ago_or_in_the_future(10))["matches"]` \

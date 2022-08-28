@@ -25,17 +25,18 @@ If the script is run on a spreadhseet that's empty, it will get data for matches
 1) Download this entire repository.
 2) Run `pip install -r requirements.txt` in your commnnand line to install the necessary packages.
 3) Run the get_matches.py script. If it's your first time running it you'll be prompted to enter your API key, which you can get for free [here](https://www.football-data.org/client/register). For convenience, I recommend hardcoding your API key (as long as your script is only stored locally) by chaning this line in the code 
-`os.environ["FOOTBALL_DATA_API"] = input("Enter your api key: ")` to
+`os.environ["FOOTBALL_DATA_API"] = input("Enter your api key: ")` \ 
+to \
 `os.environ["FOOTBALL_DATA_API"] = "your_api_string"`.
 4) Open the matches.xlsx file and you'll see the new data added!
 
 ## Optional Modifications
 1) Change the `competitions` variable to get match data for more leagues (but some leagues require you to pay).
 2) To specify your own date range to get match data for, modify this line:
-`matches = data.get_info('matches', dateFrom=last_date_date, dateTo=n_days_ago_or_in_the_future(0))["matches"]`
-to something like this
-`matches = data.get_info('matches', dateFrom=n_days_ago_or_in_the_future(-10), dateTo=n_days_ago_or_in_the_future(10))["matches"]`
-which will get all the matches that were played on or after the date 10 days ago and on or before the date 10 days in the future.
-or something like this
-`matches = data.get_info('matches', dateFrom=datetime(2022, 8, 20), dateTo=datetime(2022, 8, 27))["matches"]`
+`matches = data.get_info('matches', dateFrom=last_date_date, dateTo=n_days_ago_or_in_the_future(0))["matches"]` \
+to something like this \
+`matches = data.get_info('matches', dateFrom=n_days_ago_or_in_the_future(-10), dateTo=n_days_ago_or_in_the_future(10))["matches"]` \
+which will get all the matches that were played on or after the date 10 days ago and on or before the date 10 days in the future. \
+or something like this \
+`matches = data.get_info('matches', dateFrom=datetime(2022, 8, 20), dateTo=datetime(2022, 8, 27))["matches"]` \
 which will get data for all matches on or after August 20, 2022 and on or before August 27, 2022.

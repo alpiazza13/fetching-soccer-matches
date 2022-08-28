@@ -1,0 +1,3 @@
+pandas
+football_data_api
+datetime

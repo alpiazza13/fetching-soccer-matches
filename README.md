@@ -25,7 +25,7 @@ If the script is run on a spreadhseet that's empty, it will get data for matches
 1) Download this entire repository.
 2) Run `pip install -r requirements.txt` in your commnnand line to install the necessary packages.
 3) Run the get_matches.py script. If it's your first time running it you'll be prompted to enter your API key, which you can get for free [here](https://www.football-data.org/client/register). For convenience, I recommend hardcoding your API key (as long as your script is only stored locally) by chaning this line in the code: \
-`os.environ["FOOTBALL_DATA_API"] = input("Enter your api key: ")` \ 
+`os.environ["FOOTBALL_DATA_API"] = input("Enter your api key: ")` \
 to: \
 `os.environ["FOOTBALL_DATA_API"] = "your_api_string"`.
 4) Open the matches.xlsx file and you'll see the new data added!

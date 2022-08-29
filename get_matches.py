@@ -57,7 +57,7 @@ new_matches["Day"] = dates_eastern.apply(lambda x: calendar.day_name[x.weekday()
 ids = new_matches["Match ID"].tolist() # all new match ids
 assert len(ids) == len(set(ids)) # check that no duplicate new ids
 old_matches = pd.read_excel("matches.xlsx")
-print(f"You previously had {len(old_matches)} matches.")
+print(f"\nYou previously had {len(old_matches)} matches.")
 old_match_ids = old_matches["Match ID"].tolist()
 
 # for any id that is in both new and old data, keep the old done_with value by changing it in the new_matches table
